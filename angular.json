@@ -1,5 +1,8 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": "e3209313-848d-482f-aea4-4301bf657544"
+  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
@@ -27,17 +30,18 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "./css/style.css"
             ],
-            "scripts": []
+            "scripts": ["./node_modules/jquery/dist/jquery.js"]
           },
           "configurations": {
             "production": {
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kb",
-                  "maximumError": "1mb"
+                  "maximumWarning": "5mb",
+                  "maximumError": "10mb"
                 },
                 {
                   "type": "anyComponentStyle",
